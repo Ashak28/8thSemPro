@@ -1,0 +1,41 @@
+#submit {
+    background: #0066A2;
+    color: white;
+    border-style: outset;
+    border-color: #0066A2;
+    height: 50px;
+    width: 100px;
+    font-family: 'Ubuntu', sans-serif;
+    text-shadow: none;
+    }
+
+#title{
+    background-color: #2F8F9D;
+    padding: 3% 15%;
+    text-align: center;
+}
+#logo{
+    margin-left: 5mm;
+    font-family: 'Ubuntu', sans-serif;
+}
+h1{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.5;
+    font-weight: 700;
+    color: white;
+    padding: 3% 0 7% 0;
+}
+#footer{
+    background-color: #82DBD8;
+    padding: 30% 43% 3% 43%;
+    color: white;
+}
+
+.cred{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    color: white;
+    padding-right: 3mm;
+}
