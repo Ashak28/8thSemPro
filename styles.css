@@ -1,21 +1,28 @@
-#submit {
-    background: #0066A2;
-    color: white;
-    border-style: outset;
-    border-color: #0066A2;
-    height: 50px;
-    width: 100px;
-    font-family: 'Ubuntu', sans-serif;
-    text-shadow: none;
-    }
-
-#title{
-    background-color: #2F8F9D;
-    padding: 3% 15%;
+.cmrit{
+    background-color: #3BACB6;
+    padding: 3% 10%;
     text-align: center;
 }
+
 #logo{
-    margin-left: 5mm;
+    size: 70%;
+}
+
+.content{
+    background-color: #3BACB6;
+    padding: 3% 10%;
+    text-align: center;
+}
+.header{
+    background-color: #3BACB6;
+    padding: 3% 10%;
+    text-align: center;
+}
+
+#submit{
+    margin-bottom: 5mm;
+}
+#logo{
     font-family: 'Ubuntu', sans-serif;
 }
 h1{
@@ -27,15 +34,65 @@ h1{
     color: white;
     padding: 3% 0 7% 0;
 }
-#footer{
-    background-color: #82DBD8;
-    padding: 30% 43% 3% 43%;
+h2{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.5;
+    font-weight: 700;
     color: white;
+    padding: 3% 0 7% 0;
+}
+h3{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.5;
+    font-weight: 700;
+    color: white;
+    padding: 3% 0 7% 0;
+}
+#footer{
+    background-color: #B3E8E5;
+    padding: 30% 47% 3% 47%;
 }
 
-.cred{
+p{
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+label{
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     color: white;
     padding-right: 3mm;
+    display: inline-block;
+    width: 3cm;
+    text-align: right;
 }
+
+a:link { 
+    text-decoration: none; 
+    color: white;
+}
+a:visited { 
+    text-decoration: none;
+    color: black; 
+}
+a:hover { 
+    text-decoration: none;
+    color: gray; 
+}
+a:active { 
+    text-decoration: none;
+    color: white; 
+}
+
+.content2{
+    background-color: #82DBD8;
+    padding: 3% 10%;
+    text-align: center;
+}
+
+

@@ -1,10 +1,49 @@
+<?php
+
+$host = "localhost";		         // host = localhost because database hosted on the same server where PHP files are hosted
+$dbname = "id19082125_userinfo";              // Database name
+$usernamedb = "id19082125_ashvin";		// Database username
+$passworddb = "apxyIP7hOSi{@T#j";
+
+if(isset($_POST['submit'])){
+    $fname=$_POST['fname'];
+    $lname=$_POST['lname'];
+    $email=$_POST['email'];
+    $pass=$_POST['password'];
+    $fno=$_POST['flatno'];
+    $cno=$_POST['cno'];
+
+    $connection=mysqli_connect($host,$usernamedb,$passworddb,$dbname);
+
+    $newentry_query="INSERT INTO userinfo (Firstname,Lastname,Email,Password,Flatno,Contactno) VALUES ('$fname','$lname','$email','$pass','$fno','$cno')";
+
+    $email_verify_query="SELECT Email FROM userinfo WHERE Email='$email'" ;
+
+    $verify_email=mysqli_query($connection,$email_verify_query);
+
+    while($row=mysqli_fetch_assoc($verify_email)){
+        if($row['Email']=="$email"){
+            die("email already in use");
+        }
+    }
+    
+    $res=mysqli_query($connection,$newentry_query);
+    
+    if($res!== TRUE){
+        die("New Entry FAILED " . mysqli_error($res));
+    }
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>New User</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
@@ -14,7 +53,7 @@
     <link rel="icon" href="favicon.ico">
 </head>
 <body>
-    <section class="header">
+<section class="header">
         <nav class='navbar sticky-top navbar-expand-lg navbar-dark'>
             <a class="navbar-brand" href="#">
                 <img src="favicon.ico" width="30" height="30" alt="">
@@ -32,25 +71,11 @@
             </div>
         </nav>
     </section>
-    <section class="content2">
-        <h3>This project was created by the following members: </h3><br><br>
-        <div class="members">
-            <div class="skill-row">
-                <img class="" src="ImagesMe/python.png" alt="Python-programming">
-                <h3>Python Programming</h3>
-                <p>Python is a widely used and one the easiest to understand programming languages. I've done quite a lot of programming using this language.</p>
-            </div>
-            <div class="skill-row">
-                <img class="html-5" src="ImagesMe/html.png" alt="HTML-5">
-                <h3>Web design using HTML, CSS and Javascript</h3>
-                <p>HTML and CSS are the primary components used to create all websites and Javascript may be added to give better functionality. I've created some webpages that use these tools.</p>
-            </div>
-            <div class="skill-row">
-                <img class="arduino" src="ImagesMe/arduino-modified.png" alt="arduino">
-                <h3>Programming in Arduino IDE</h3>
-                <p>This IDE is used for developing projects for the Arduino microcontroller. I've worked with this IDE for some projects.</p>
-            </div>
-        </div>
+
+    <section class="content">
+        <h2>New user added</h2>
+
     </section>
+
 </body>
 </html>

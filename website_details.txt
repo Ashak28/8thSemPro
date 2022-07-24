@@ -1,0 +1,14 @@
+website name: project-web-db
+
+password: S7^U2*eImb7@HA!X&vDD
+
+URL: project-web-db.000webhostapp.com
+
+
+Database
+
+name: id19082125_userinfo
+
+username: id19082125_ashvin
+
+password: apxyIP7hOSi{@T#j

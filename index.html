@@ -10,36 +10,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Merriweather+Sans&family=Montserrat:wght@400;700&family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
     <title>WUSBS</title>
 </head>
 
 <body>
-    <section id="title">
-        <nav class='navbar navbar-expand-lg navbar-dark'>
-            <a id="logo" class='navbar-brand' href=''>WUSBS</a>
+    <section class="header">
+        <nav class='navbar sticky-top navbar-expand-lg navbar-dark'>
+            <a class="navbar-brand" href="#">
+                <img src="favicon.ico" width="30" height="30" alt="">
+            </a>
+            <a id="logo" class='navbar-brand' href='index.html'>WUSBS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class='collapse navbar-collapse' id='navbarTogglerDemo01'>
               <ul class='navbar-nav ms-auto'>
                   <li class='nav-item'>
-                      <a class='nav-link' href=''>About</a>
+                      <a class='nav-link' href='about.html'>About Us</a>
                   </li>
               </ul>
             </div>
-          </nav>
-        <h1>Water billing system</h1>
-        <form action="">
-            <label for="username" class="cred">Username</label>
-            <input type="text" name="user" id="username"><br><br>
-            <label for="password" class="cred">Password</label>
+        </nav>
+    </section>
+    <section class="cmrit">
+        <div class="md-col-2">
+            <img src="cmrit_logo.png" alt="cmrit_logo" id="logo">
+            <img src="vtu_logo.png" alt="vtu_logo" id="logo">
+        </div>
+    </section>
+    <section class="content">
+        <h1>Water Utilization Supervision and Billing System</h1>
+        <form action="login.php" method="POST">
+            <label for="username">Email ID</label>
+            <input type="text" name="email" id="email"><br><br>
+            <label for="password" >Password</label>
             <input type="password" name="pass" id="password"><br><br>
-            <input type="submit" name="submit" id="submit">
+            <input type="submit" name="submit" id="submit" class="btn btn-outline-primary btn-lg">
+            <p>New user? <a href="newuser.html">Click here</a></p>
         </form>
     </section>
 
     <section id="footer">
-        <h5>©Group282</h5>
+        <p>©Group282</p>
     </section>
 </body>
 </html>
